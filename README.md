@@ -5,6 +5,9 @@
 # 📝 🕊 Pigeon Back
 *Back end of my chat mobile app .*
 
+## Techno
+- Node Js
+
 ## Project content
 - Login
 - Register
