@@ -5,13 +5,17 @@ const apiRouter = require('../routes');
 const multer = require("multer");
 const path= require("path");
 
+
 require("dotenv").config();
+
 
 //======================================================================================================================
 app.use(express.json());
 app.use(cors());
 app.use('/api', apiRouter);
-app.use("/img", express.static(path.join(__dirname,"/img")));
+app.use('/img', express.static("/img"));
+//======================================================================================================================
+
 
 //======================================================================================================================
 exports.start = () => {   
