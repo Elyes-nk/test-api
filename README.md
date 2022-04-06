@@ -1,3 +1,36 @@
-# Back for my Netflix clone 
+<h1 align="center">
+    <img height="250" src="https://cdn-icons-png.flaticon.com/512/134/134914.png">
+</h1>
 
-#### with NodeJs / ExpressJs / JsonWebToken authentication / Stripe payment method for subscribtions
+# 📝 🕊 Pigeon Back
+*Back end of my chat mobile app .*
+
+## Techno
+- Node Js
+
+## Project content
+- Login
+- Register
+- Users
+- Messages
+
+
+# Project structure
+
+```shell
+├── controllers
+│   └──  ...  
+├── img
+│   └──  ...  
+├── jsonwebtoken
+│ 
+├── models
+│   └──  ...  
+├── routes
+│   └──  ...
+├── services
+│   └──  ...
+├──  index.js
+│   
+└──  package.json
+```
