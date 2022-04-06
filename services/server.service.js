@@ -3,8 +3,6 @@ const app = express();
 const cors=require('cors');
 const apiRouter = require('../routes');
 const multer = require("multer");
-const path= require("path");
-
 
 require("dotenv").config();
 
