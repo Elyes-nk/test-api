@@ -2,7 +2,7 @@ const User = require("../models/User");
 const CryptoJS = require("crypto-js");
 
 exports.update = async (req, res) => {
-    if (req.user.id === req.body.id) {
+    if (req.user._id === req.body.id) {
       if (req.body.password) {
         req.body.password = CryptoJS.AES.encrypt(
           req.body.password,
@@ -28,7 +28,7 @@ exports.update = async (req, res) => {
 }
 
 exports.delete = async (req, res) => {
-    if (req.user.id === req.body.id) {
+    if (req.user._id === req.body.id) {
       try {
         await User.findByIdAndDelete(req.body.id);
         res.status(200).json("User has been deleted...");
