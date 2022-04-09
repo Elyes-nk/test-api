@@ -8,7 +8,4 @@ router.post("/",  verify, messagesController.create);
 //GET
 router.get("/find/", verify, messagesController.get);
 
-//GET ALL
-router.get("/", verify, messagesController.getAll);
-
 module.exports = router;

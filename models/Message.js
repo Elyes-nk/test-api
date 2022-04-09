@@ -3,9 +3,18 @@ const Schema = mongoose.Schema;
 
 const MessageSchema = new Schema(
   {
-    content: { type: String },
-    sender: { type: Schema.Types.ObjectId, ref: 'User' },
-    receiver:{ type: Schema.Types.ObjectId, ref: 'User' },
+    discussionId: {
+      type: String,
+    },
+    sender: {
+      type: String,
+    },
+    text: {
+      type: String,
+    },
+    image: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
