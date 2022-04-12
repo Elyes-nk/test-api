@@ -13,7 +13,7 @@ exports.create = async (req, res) => {
 exports.get = async (req, res) => {
   try {
     const messages = await Message.find({
-      discussionId: req.body.discussionId,
+      discussionId: req.params.discussionId,
     });
     res.status(200).json(messages);
   } catch (err) {

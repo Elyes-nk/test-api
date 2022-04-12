@@ -6,6 +6,6 @@ const messagesController = require("../controllers/messagesController");
 router.post("/",  verify, messagesController.create);
 
 //GET
-router.get("/find/", verify, messagesController.get);
+router.get("/find/:discussionId", verify, messagesController.get);
 
 module.exports = router;

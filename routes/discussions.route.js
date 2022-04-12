@@ -6,9 +6,9 @@ const discussionsController = require("../controllers/discussionsController");
 router.post("/",  verify, discussionsController.create);
 
 //GET DISCUSSION OF TWO USERS
-router.get("/find/", verify, discussionsController.get);
+router.get("/find/:firstUserId/:secondUserId", verify, discussionsController.get);
 
-//GET
-router.get("/", verify, discussionsController.getAll);
+//GET DISCUSSION OF ONE USER
+router.get("/:userId", verify, discussionsController.getAll);
 
 module.exports = router;

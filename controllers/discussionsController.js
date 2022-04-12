@@ -15,7 +15,7 @@ exports.create = async (req, res) => {
 exports.get = async (req, res) => {
   try {
     const discussion = await Discussion.findOne({
-      members: { $all: [req.body.firstUserId, req.body.secondUserId] },
+      members: { $all: [req.params.firstUserId, req.params.secondUserId] },
     });
     res.status(200).json(discussion)
   } catch (err) {
@@ -26,7 +26,7 @@ exports.get = async (req, res) => {
 exports.getAll = async (req, res) => {
   try {
     const discussion = await Discussion.find({
-      members: { $in: [req.body.userId] },
+      members: { $in: [req.params.userId] },
     });
     res.status(200).json(discussion);
   } catch (err) {
