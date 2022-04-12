@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 const DiscussionSchema = new Schema(
   {
-    members: {
-      type: Array,
-    },
+    members: [
+      { type: String }
+    ]
   },
   { timestamps: true }
 );
