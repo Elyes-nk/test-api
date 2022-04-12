@@ -5,10 +5,10 @@ const discussionsController = require("../controllers/discussionsController");
 //CREATE
 router.post("/",  verify, discussionsController.create);
 
-//GET
+//GET DISCUSSION OF TWO USERS
 router.get("/find/", verify, discussionsController.get);
 
-//GET DISCUSSION OF TWO USERS
+//GET
 router.get("/", verify, discussionsController.getAll);
 
 module.exports = router;
