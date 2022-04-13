@@ -1,42 +1,27 @@
 const User = require("../models/User");
-const CryptoJS = require("crypto-js");
 
-exports.update = async (req, res) => {
-    if (req.user._id === req.params.id) {
-      if (req.body.password) {
-        req.body.password = CryptoJS.AES.encrypt(
-          req.body.password,
-          process.env.SECRET_KEY
-        ).toString();
-      }
-  
-      try {
-        const updatedUser = await User.findByIdAndUpdate(
-          req.body.id,
-          {
-            $set: req.body,
-          },
-          { new: true }
-        );
-        res.status(200).json(updatedUser);
-      } catch (err) {
-        res.status(500).json(err);
-      }
-    } else {
-      res.status(403).json("You can update only your account!");
+exports.update = async (req, res) => {     
+    try {
+      const updatedUser = await User.findByIdAndUpdate(
+        req.body.id,
+        {
+          $set: req.body,
+        },
+        { new: true }
+      );
+      const { password, ...info } = updatedUser._doc;
+      res.status(200).json(info);
+    } catch (err) {
+      res.status(500).json(err);
     }
 }
 
 exports.delete = async (req, res) => {
-    if (req.user._id === req.params.id) {
-      try {
-        await User.findByIdAndDelete(req.params.id);
-        res.status(200).json("User has been deleted...");
-      } catch (err) {
-        res.status(500).json(err);
-      }
-    } else {
-      res.status(403).json("You can delete only your account!");
+    try {
+      await User.findByIdAndDelete(req.params.id);
+      res.status(200).json("User has been deleted...");
+    } catch (err) {
+      res.status(500).json(err);
     }
 }
 
