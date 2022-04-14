@@ -19,7 +19,7 @@ app.use("/img", express.static(path.join(process.cwd(),"img")));
 //====================================== storage img using multer ======================================================
 const storage = multer.diskStorage({
     destination:(req,file,cb) => {
-        cb(null,"img");
+        cb(null,path.join(process.cwd(),"img"));
     },filename:(req,file,cb) => {
         cb(null,req.body.name);
     }, 
@@ -27,13 +27,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage:storage});
 app.post("/api/upload", upload.single("file"), (req,res)=>{
-        try {
-            return res.status(200).json("File uploded successfully");
-        } catch (error) {
-                console.error(error);
-        }
-    })
+    res.status(200).json("file uploaded successfully 🔥 ");
+})
 //======================================================================================================================
+
 
 //======================================================================================================================
 exports.start = () => {   
