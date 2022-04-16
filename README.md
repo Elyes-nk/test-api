@@ -15,7 +15,7 @@
 ## Infos
 - MongoDb database 
 - Hosted in Heroku
-- Front end : [https://github.com/Elyes-nk/pigeon]
+- Mobile app : [https://github.com/Elyes-nk/pigeon]
 
 # Project content
 ## Authentification 
