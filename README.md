@@ -13,7 +13,7 @@
 - Crypto-js
 
 ## Infos
-- MongoDb serveur 
+- MongoDb database 
 - Hosted in Heroku
 - Front end : [https://github.com/Elyes-nk/pigeon]
 
@@ -22,6 +22,7 @@
 *Authentication with JsonWebToken, Password encryption with Crypto-js.*
 - Login
 - Register
+- Verify token
 
 ## Features 
 - Users
