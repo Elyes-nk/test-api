@@ -3,17 +3,31 @@
 </h1>
 
 # 📝 🕊 Pigeon Back
-*Back end of my chat mobile app .*
+*Back end of a chat mobile app created by `Elyes Nait kaci.`*
 
-## Techno
+## Technos
 - Node Js
+- Express Js
+- Mongoose
+- JsonWebToken
+- Crypto-js
 
-## Project content
+## Infos
+- MongoDb serveur 
+- Hosted in Heroku
+- Front end : [https://github.com/Elyes-nk/pigeon]
+
+# Project content
+## Authentification 
+*Authentication with JsonWebToken, Password encryption with Crypto-js.*
 - Login
 - Register
-- Users
-- Messages
 
+## Features 
+- Users
+- Discussions
+- Messages
+- Stories
 
 # Project structure
 
