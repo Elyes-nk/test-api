@@ -1,2 +1,2 @@
-import supertest from 'supertest'
-import app from '../../src/services/server.service'
+const request = require('supertest');
+const app = require('../../src/services/server.service')
