@@ -20,7 +20,7 @@ exports.register = async (req, res) => {
 }
 
 exports.login = async (req, res) => {
-  if(req.body.email && req.body.username && req.body.password){
+  if(req.body.username && req.body.password){
     try {
       const user = await User.findOne({ username: req.body.username });
       !user && res.status(401).json("Wrong password or username!");

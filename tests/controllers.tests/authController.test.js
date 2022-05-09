@@ -1,24 +1,24 @@
 const request = require('supertest');
-const app = require('../../src/services/server.service')
+const app = require('../../index')
 
 jest.useRealTimers();
 
-describe("POST user", () => {
+describe("POST user 📤", () => {
 
-    describe("register", () => {
+    describe("REGISTER 📝", () => {
 
-        test("with a body should respond with a 200 status code", async () => {
+        test("with a body should respond with a 201 status code 🤔", async () => {
             const res =  await request(app)
                 .post("/api/auth/register")
                 .send({
-                    email: "email",
-                    username: "username",
-                    password: "password"
+                    email: "test",
+                    username: "test",
+                    password: "test"
                 })
-            expect(res.statusCode).toBe(200)
+            expect(res.statusCode).toBe(201)
         })
  
-        test("wihtout a body should respond with a 400 status code", async () => {
+        test("wihtout a body should respond with a 400 status code 🤔", async () => {
             const res =  await request(app)
                 .post("/api/auth/register")
                 .send()
@@ -27,9 +27,9 @@ describe("POST user", () => {
 
     })
 
-    describe("login", () => {
+    describe("LOGIN 🌍", () => {
 
-        test("with a body should respond with a 200 status code", async () => {
+        test("with a body should respond with a 200 status code 🤔", async () => {
             const res =  await request(app)
                 .post("/api/auth/login")
                 .send({
@@ -39,14 +39,13 @@ describe("POST user", () => {
             expect(res.statusCode).toBe(200)
         })
 
-        test("without a body should respond with a 400 status code", async () => {
+        test("without a body should respond with a 400 status code 🤔", async () => {
             const res =  await request(app)
                 .post("/api/auth/login")
                 .send()
             expect(res.statusCode).toBe(400)
         })
-        
-    })
 
+    })
     
 })
