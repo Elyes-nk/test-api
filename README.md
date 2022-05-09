@@ -10,10 +10,8 @@
 - Node Js 
 - Express Js
 - Mongoose 
-- Jest
-*a JavaScript testing framework developed by Facebook, it works out of the box with minimal configuration and has in-built test runner, assertion library and mocking support.*
-- Supertest
-*a library for testing Node Js http servers, it enables us to programmatically send HTTP requests such as get, post, put, delete to HTTP servers and get results.*
+- Jest : *a JavaScript testing framework developed by Facebook, it works out of the box with minimal configuration and has in-built test runner, assertion library and mocking support.*
+- Supertest : *a library for testing Node Js http servers, it enables us to programmatically send http requests such as get, post, put, delete to http servers and get results.*
 
 
 # Project content
@@ -44,9 +42,9 @@
 ├── src
 │   ├── controllers
 │   │   └── ...
-│   ├── models
-│   │   └──  ...
 │   ├── routes
+│   │   └──  ...
+│   ├── models
 │   │   └──  ...  
 │   └── services
 │       └──  ...
