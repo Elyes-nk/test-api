@@ -3,15 +3,17 @@
     <img height="250" src="https://five.epicollect.net/api/internal/media/ec5-api-test?type=photo&name=logo.jpg&format=project_thumb">
 </h1>
 
-# 🕵️‍♀️ Test-api
+# 🕵️‍♀️ Test Api
 
 
 ## Technos
 - Node Js 
 - Express Js
 - Mongoose 
-- Jest : a JavaScript testing framework developed by Facebook. It works out of the box with minimal configuration and has in-built test runner, assertion library and mocking support.
-- Supertest : a library for testing Node.js HTTP servers. It enables us to programmatically send HTTP requests such as GET, POST, PATCH, PUT, DELETE to HTTP servers and get results.
+- Jest
+*a JavaScript testing framework developed by Facebook, it works out of the box with minimal configuration and has in-built test runner, assertion library and mocking support.*
+- Supertest
+*a library for testing Node Js http servers, it enables us to programmatically send HTTP requests such as get, post, put, delete to HTTP servers and get results.*
 
 
 # Project content
@@ -29,10 +31,10 @@
 - Test register
 - Test get users
 - Test get user
-- Test Update user
-- Test Delete user
-- Test Serveur ⏳
-- Test Routes ⏳
+- Test update user
+- Test delete user
+- Test serveur ⏳
+- Test routes ⏳
 
 
 
