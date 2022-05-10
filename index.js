@@ -25,6 +25,9 @@ app.start = () => {
 //=======================================================================================================================
 
 mongoose.dbConnect();
-app.start();
+
+if(process.env.NODE_ENV !== "test"){
+    app.start();
+}
 
 module.exports = app

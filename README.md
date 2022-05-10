@@ -34,6 +34,8 @@
 - Test serveur ⏳
 - Test routes ⏳
 
+# Try it
+*$ Npm test*
 
 
 # Project structure

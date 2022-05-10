@@ -1,22 +1,21 @@
 const request = require('supertest');
 const app = require('../../index')
 
-jest.useRealTimers();
 
 describe("POST user 📤", () => {
 
     describe("REGISTER 📝", () => {
 
-        test("with a body should respond with a 201 status code 🤔", async () => {
-            const res =  await request(app)
-                .post("/api/auth/register")
-                .send({
-                    email: "test",
-                    username: "test",
-                    password: "test"
-                })
-            expect(res.statusCode).toBe(201)
-        })
+        // test("with a body should respond with a 201 status code 🤔", async () => {
+        //     const res =  await request(app)
+        //         .post("/api/auth/register")
+        //         .send({
+        //             email: "test",
+        //             username: "test",
+        //             password: "test"
+        //         })
+        //     expect(res.statusCode).toBe(201)
+        // })
  
         test("wihtout a body should respond with a 400 status code 🤔", async () => {
             const res =  await request(app)
