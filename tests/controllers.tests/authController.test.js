@@ -14,14 +14,25 @@ describe("POST user 📤", () => {
         //             username: "test",
         //             password: "test"
         //         })
-        //     expect(res.statusCode).toBe(201)
+        //     expect(res.status).toBe(201)
         // })
+
+        test("with a an email, username already used should respond with a 500 status code 🤔", async () => {
+            const res =  await request(app)
+                .post("/api/auth/register")
+                .send({
+                    email: "email",
+                    username: "username",
+                    password: "password"
+                })
+            expect(res.status).toBe(500)
+        })
  
         test("wihtout a body should respond with a 400 status code 🤔", async () => {
             const res =  await request(app)
                 .post("/api/auth/register")
                 .send()
-            expect(res.statusCode).toBe(400)
+            expect(res.status).toBe(400)
         })
 
     })
@@ -35,14 +46,24 @@ describe("POST user 📤", () => {
                     username: "username",
                     password: "password"
                 })
-            expect(res.statusCode).toBe(200)
+            expect(res.status).toBe(200)
+        })
+
+        test("with a false username should respond with a 401 status code 🤔", async () => {
+            const res =  await request(app)
+                .post("/api/auth/login")
+                .send({
+                    username: "false username",
+                    password: "password"
+                })
+            expect(res.status).toBe(401)
         })
 
         test("without a body should respond with a 400 status code 🤔", async () => {
             const res =  await request(app)
                 .post("/api/auth/login")
                 .send()
-            expect(res.statusCode).toBe(400)
+            expect(res.status).toBe(400)
         })
 
     })

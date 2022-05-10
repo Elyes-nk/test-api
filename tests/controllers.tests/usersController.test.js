@@ -28,6 +28,17 @@ describe("PUT /users 🔧", () => {
         expect(json.email).toBeDefined()
     })
 
+    test("with a false id should respond with a 500 status code 🤔", async () => {
+        const res =  await request(app)
+            .put("/api/users/123456789")
+            .send({
+                email: "email",
+                username: "username",
+                password: "password"
+            })
+        expect(res.status).toBe(500)
+    })
+
     test("without id and with body should respond with a 404 status code 🤔", async () => {
         const res =  await request(app)
             .put("/api/users")
@@ -48,6 +59,28 @@ describe("PUT /users 🔧", () => {
 
 })
 
+describe("DELETE user 🗑", () => {
+
+    // test("with id should respond with a 200 status code 🤔", async () => {
+    //     const res =  await request(app)
+    //         .delete("/api/users/62793d898f0cce2da5d4fef6")
+    //     expect(res.status).toBe(200)
+    // })
+
+    test("with a false id should respond with a 500 status code 🤔", async () => {
+        const res =  await request(app)
+            .delete("/api/users/123456789")
+        expect(res.status).toBe(500)
+    })
+
+    test("whitout id should respond with a 404 status code 🤔", async () => {
+        const res =  await request(app)
+            .delete("/api/users")
+        expect(res.status).toBe(404)
+    })
+
+})
+
 describe("GET user 📲", () => {
 
     test("with id should respond with a 200 status code 🤔", async () => {
@@ -58,25 +91,15 @@ describe("GET user 📲", () => {
         expect(json.email).toBeDefined()
     })
 
+    test("with a false id should respond with a 500 status code 🤔", async () => {
+        const res =  await request(app)
+            .get("/api/users/find/123456789")
+        expect(res.status).toBe(500)
+    })
+
     test("without id should respond with a 404 status code 🤔", async () => {
         const res =  await request(app)
             .get("/api/users/find")
-        expect(res.status).toBe(404)
-    })
-
-})
-
-describe("DELETE user 🗑", () => {
-
-    // test("with id should respond with a 200 status code 🤔", async () => {
-    //     const res =  await request(app)
-    //         .delete("/api/users/62793d898f0cce2da5d4fef6")
-    //     expect(res.status).toBe(200)
-    // })
-
-    test("whitout id should respond with a 404 status code 🤔", async () => {
-        const res =  await request(app)
-            .delete("/api/users")
         expect(res.status).toBe(404)
     })
 
