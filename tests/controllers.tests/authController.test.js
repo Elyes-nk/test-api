@@ -6,16 +6,16 @@ describe("POST user 📤", () => {
 
     describe("REGISTER 📝", () => {
 
-        // test("with a body should respond with a 201 status code 🤔", async () => {
-        //     const res =  await request(app)
-        //         .post("/api/auth/register")
-        //         .send({
-        //             email: "test",
-        //             username: "test",
-        //             password: "test"
-        //         })
-        //     expect(res.status).toBe(201)
-        // })
+        test("with a body should respond with a 201 status code 🤔", async () => {
+            const res =  await request(app)
+                .post("/api/auth/register")
+                .send({
+                    email: "test",
+                    username: "test",
+                    password: "test"
+                })
+            expect(res.status).toBe(201)
+        })
 
         test("with a an email, username already used should respond with a 500 status code 🤔", async () => {
             const res =  await request(app)

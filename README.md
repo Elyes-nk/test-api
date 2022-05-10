@@ -31,8 +31,8 @@
 - Test get user
 - Test update user
 - Test delete user
+- Test routes 
 - Test serveur ⏳
-- Test routes ⏳
 
 # Try it
 *$ Npm test*
@@ -51,11 +51,8 @@
 │   └── services
 │       └──  ...
 ├── tests
-│   ├── controllers.tests
-│   │   └── ...
-│   ├── routes.tests
-│   │   └──  ...  
-│   └── index.test
+│   └── controllers.tests
+│       └── ...
 │
 ├──  index.js
 └──  package.json
