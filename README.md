@@ -36,7 +36,7 @@
 
 # Try it
 - Create a .env file like .env.template and insert your mongodb url and a port
-- ~~~zsh $ Npm test
+~~~zsh $ Npm test
 
 ![Capture d’écran 2022-05-10 à 17 40 10](https://user-images.githubusercontent.com/59204034/167670009-9e11c533-52b2-43e2-af2f-f12a1de9e49f.png)
 
